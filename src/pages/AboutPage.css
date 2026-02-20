@@ -1,0 +1,148 @@
+.about-page {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    position: relative;
+    display: inline-block;
+}
+
+/* Override global h1 underline to center it for the about page */
+.about-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4rem;
+}
+
+.about-intro {
+    margin-bottom: 4rem;
+}
+
+.lead-text {
+    font-size: 1.35rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+.about-mission {
+    background-color: var(--bg-muted);
+    padding: 3rem;
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 4rem;
+    border: 1px solid var(--border-color);
+}
+
+.about-mission h2 {
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.about-mission p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    text-align: left;
+}
+
+.highlight-card {
+    background: var(--bg-surface);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.highlight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.highlight-icon {
+    background-color: var(--bg-muted);
+    color: var(--color-primary);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all var(--transition-fast);
+}
+
+.highlight-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.highlight-card:hover .highlight-icon {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.highlight-card h3 {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.highlight-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Responsive Highlights Grid */
+@media (max-width: 900px) {
+    .about-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .lead-text {
+        font-size: 1.15rem;
+    }
+
+    .about-mission {
+        padding: 2rem;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-card {
+        align-items: center;
+        text-align: center;
+    }
+}
